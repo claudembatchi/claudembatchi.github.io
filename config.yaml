@@ -1,0 +1,410 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "Hugo Profile"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+    - identifier: gallery
+      name: Gallery
+      title: Blog posts
+      url: /gallery
+      weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Hugo Profile"
+  description: Text about my cool site
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # color:
+  #   textColor: "#343a40"
+  #   secondaryTextColor: "#6c757d"
+  #   textLinkColor: "#007bff"
+  #   backgroundColor: "#eaedf0"
+  #   secondaryBackgroundColor: "#64ffda1a"
+  #   primaryColor: "#007bff"
+  #   secondaryColor: "#f8f9fa"
+
+  #   darkmode:
+  #     textColor: "#e4e6eb"
+  #     secondaryTextColor: "#b0b3b8"
+  #     textLinkColor: "#ffffff"
+  #     backgroundColor: "#18191a"
+  #     secondaryBackgroundColor: "#212529"
+  #     primaryColor: "#ffffff"
+  #     secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Salut, je m'appelle"
+    title: "Steph."
+    subtitle: "Je construis des choses pour le Web"
+    content: "Un développeur d’applications web passionné. J’ai tendance à utiliser les technologies Web modernes pour créer des sites Web qui ont fière allure, se sentent fantastiques et fonctionnent correctement."
+    image: /images/steph.png
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Reprendre"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/claudembatchi
+        - icon: fab fa-brands fa-square-instagram
+          url: https://www.instagram.com/steph_mbatchi_?igsh=MXByZ2Jxd2FsNzhnaQ%3D%3D&utm_source=qr
+      customIcons:
+        - icon: /fav.png
+          url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      Je suis un développeur de logiciels passionné par le développement Web et le Réseau. J'ai une formation informatique en BTS SIO et j'ai un fort intérêt pour l'intersection de la technologie et de l'art. Je suis actuellement en stage en tant que développeur de logiciels dans une organisation Réseau & Logiciel. à Chaumont, France. [Backyard fr.](https://landings.lebackyard.fr) 
+
+      Je travaille actuellement sur un projet qui servira à aider les gens à trouver le meilleur moyen de se déplacer en ville.
+    skills:
+      enable: true
+      title: "Voici quelques technologies avec lesquelles j'ai travaillé récemment :"
+      items:
+        - "HTML"
+        - "CSS"
+        - "JavaScript"
+        - "React"
+        - "Python"
+        - "PHP"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Développeur de logiciels senior"
+        company: "Facebook"
+        companyUrl: "https://landings.lebackyard.fr"
+        date: "Jan 2021 - present"
+        featuredLink:
+          enable: true
+          name: "View the project"
+          url: "https://example.com"
+        content: "Je travaille actuellement en tant que développeur de logiciels dans une organisation [Backyard fr.](https://landings.lebackyard.fr) . à Chaumont, France. Je travaille actuellement sur un projet qui servira à aider les gens à trouver le meilleur moyen de se déplacer en ville.
+ ."
+
+      - job: "Software Developer"
+        company: "Amazon"
+        companyUrl: "https://example.com"
+        date: "Sep 2020 - Dec 2021"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        info:
+          enable: true
+          content: I worked as a software developer for more than one year in Amazon.
+        content: |
+          Je travaille actuellement en tant que développeur de logiciels dans une organisation [Backyard fr.](https://landings.lebackyard.fr) . à Chaumont, France. Je travaille actuellement sur un projet qui servira à aider les gens à trouver le meilleur moyen de se déplacer en ville
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "Junior Software Developer"
+        company: "Apple"
+        companyUrl: "https://example.com"
+        date: "Jan 2020 - Aug 2020"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        content: |
+         Je travaille actuellement en tant que développeur de logiciels dans une organisation [Backyard fr.](https://landings.lebackyard.fr) . à Chaumont, France. Je travaille actuellement sur un projet qui servira à aider les gens à trouver le meilleur moyen de se déplacer en ville.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "UI/UX Designer"
+        company: "Netflix"
+        companyUrl: "https://example.com"
+        date: "June 2017 - Nov 2019"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        content: |
+         Je travaille actuellement en tant que développeur de logiciels dans une organisation [Backyard fr.](https://landings.lebackyard.fr) . à Chaumont, France. Je travaille actuellement sur un projet qui servira à aider les gens à trouver le meilleur moyen de se déplacer en ville.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "Product Designer"
+        company: "Google"
+        companyUrl: "https://example.com"
+        date: "Feb 2016 - Mar 2017"
+        content: "IJe travaille actuellement en tant que développeur de logiciels dans une organisation [Backyard fr.](https://landings.lebackyard.fr) . à Chaumont, France. Je travaille actuellement sur un projet qui servira à aider les gens à trouver le meilleur moyen de se déplacer en ville.."
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "BTS SIO "
+        school:
+          name: "Lycée Bouchardon, France"
+          url: "https://example.org"
+        date: "2024 - 2025"
+        GPA: "3.8 out of 5.0"
+        content: |-
+          Activité Extra-Scolaire
+            - Visite d'usine de Robotique
+            - Entreprise de devéloppement.
+      - title: "Licence1 Mathématique"
+        school:
+          name: "Université de Besançon"
+          url: "https://example.org"
+        date: "2023 - 2024"
+        GPA: "3.9 out of 5.0"
+        content: |-
+          Etude basé sur les math appliqué et la programmation.
+
+          Extracurricular Activities
+            - Visite d'une chambre blanche.
+            - Visite Usine de fabrication de piece electronique
+        featuredLink:
+          enable: true
+          name: "Licence1 Mathématique"
+          url: "https://example.com"
+      - title: "Université de Besançon"
+        school:
+          name: "Thomas Jefferson High School for Science and Technology."
+          url: "https://example.org"
+        GPA: "4.2 out of 5.0"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Coureur de démarrage Google
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+        image: /images/achievment.jpg
+      - title: Facebook Hackathon Winner
+        content: Développement d'un produit utilisant l'Intelligence Artificielle.
+        image: /images/achievment.jpg
+      - title: Hugo Profile
+        content: Développer un thème et obtenir plus de 1 000 téléchargements par mois.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievment.jpg
+      - title: Microsoft Imagine Runner
+        content: Nous avons développé un produit qui peut aider les autres.
+      - title: Google Summer of Code
+        content: Contribution à un projet open source.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Hugo Profile
+        content: Un premier modèle Hugo hautement personnalisable et mobile pour votre portfolio personnel et votre blog.
+        image: /images/projects/profile.png
+        featured:
+          name: Demo
+          link: https://hugo-profile.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/hugo-profile
+          - icon: fab fa-twitter
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Image Converter
+        content: Une application Web pour convertir une image en pdf, png en jpg, png en jpg et png en webp sans base de données à l'aide de Django.
+        image: /images/projects/converter.jpg
+        featured:
+          name: Demo
+          link: https://django-converter.herokuapp.com
+        badges:
+          - "Django"
+          - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/converter
+
+      - title: Hugo Profile V2
+        content: Un modèle Hugo propre et simple pour votre portfolio personnel et votre blog.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Demo V2
+          link: https://hugo-profile-2.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: Votre boîte de réception est toujours ouverte. Que vous ayez une question ou que vous souhaitiez simplement vous dire bonjour, je ferai de mon mieux pour vous répondre !
+    btnName: Mail me
+    btnLink: mailto:gurusabarisha@gmail.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com
+      linkedin: https://linkedin.com
+      twitter: https://twitter.com
+      instagram: https://instagram.com
+      facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
